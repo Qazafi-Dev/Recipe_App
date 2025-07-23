@@ -17,29 +17,29 @@ const BottomTab = ({ state, navigation, descriptors, ...rest }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {tabs.map((tab, index) => (
-        <TouchableOpacity
-          key={index}
-          style={styles.mainContainer}
-          onPress={() => {
-            navigation.navigate(tab.route);
-          }}
-        >
-          <Image
-            source={tab.icon}
-            style={{ width: dim[index].width, height: dim[index].height }}
-          />
+      {tabs.map(
+        (tab, index) =>
+          tab.isShow && (
+            <TouchableOpacity
+              key={index}
+              style={styles.mainContainer}
+              onPress={() => {
+                navigation.navigate(tab.route);
+              }}
+            >
+              <tab.iconType name={tab.icon} size={22} color="white" />
 
-          <Text
-            style={{
-              ...styles.labelText,
-              color: state.index == index ? '#fff' : '#827D88',
-            }}
-          >
-            {tab.title}
-          </Text>
-        </TouchableOpacity>
-      ))}
+              <Text
+                style={{
+                  ...styles.labelText,
+                  color: state.index == index ? '#fff' : '#827D88',
+                }}
+              >
+                {tab.title}
+              </Text>
+            </TouchableOpacity>
+          ),
+      )}
     </SafeAreaView>
   );
 };

@@ -1,18 +1,18 @@
-import { MaterialIcons } from 'react-native-vector-icons/MaterialIcons';
+import { default as MaterialIcons } from 'react-native-vector-icons/MaterialIcons';
 
 export const tabs = [
   {
     iconType: MaterialIcons,
-    icon: <MaterialIcons name="food-bank" size={24} color="black" />,
-    title: 'Dashoard',
+    icon: 'food-bank',
+    title: 'Home',
     isShow: true,
-    route: 'Dashoard',
+    route: 'Home',
   },
   {
     iconType: MaterialIcons,
-    icon: <MaterialIcons name="food-bank" size={24} color="black" />,
-    title: 'Dashoard',
+    icon: 'food-bank',
+    title: 'Home',
     isShow: true,
-    route: 'Dashoard',
+    route: 'Home',
   },
 ];

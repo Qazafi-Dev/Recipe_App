@@ -5,7 +5,8 @@ export default StyleSheet.create({
   container: {
     flexDirection: 'row',
     backgroundColor: '#2E2739',
-    borderRadius: 27,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
     height: hp(9),
     alignItems: 'center',
     justifyContent: 'space-between',
